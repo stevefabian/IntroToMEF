@@ -1,0 +1,14 @@
+﻿@model WebApplication1.Contracts.Person
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<h3>@Model.Name</h3>
+<ul>
+    @foreach (var activity in @Model.Activities)
+    {
+        <li>@activity.DoWork()</li>
+    }
+</ul>
